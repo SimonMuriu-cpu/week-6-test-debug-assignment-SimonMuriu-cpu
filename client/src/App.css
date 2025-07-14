@@ -1,0 +1,133 @@
+.app {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f8fafc;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* Auth loading styles */
+.auth-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #64748b;
+}
+
+/* Error boundary styles */
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  padding: 2rem;
+}
+
+.error-container {
+  max-width: 600px;
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-container h1 {
+  color: #ef4444;
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.error-container p {
+  color: #64748b;
+  margin: 0 0 2rem;
+  font-size: 1.125rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.error-button.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.error-button.primary:hover {
+  background: #2563eb;
+}
+
+.error-button.secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.error-button.secondary:hover {
+  background: #e2e8f0;
+}
+
+.error-details {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.error-details summary {
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.error-stack {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #475569;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
